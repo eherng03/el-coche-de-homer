@@ -32,10 +32,10 @@ string vehiculo::getTipo(){
 }
  //Metodo que mete un String con el nombre del vehiculo
 void vehiculo::setNombre(string xnombre){
-    return this->nombre;
+    this->nombre = xnombre;
 }
   //Metodo que genera un String con la matrícula del vehiculo
-void vehiculo::generarMatricula(){
+string vehiculo::generarMatricula(){
 
 }
 //Metodo que mete un String con el numero de ruedas del vehiculo
