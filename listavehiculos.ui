@@ -40,7 +40,7 @@
       <height>229</height>
      </rect>
     </property>
-    <widget class="QTextEdit" name="textEdit">
+    <widget class="QTextEdit" name="textVehiculosGuardados">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -52,7 +52,7 @@
     </widget>
    </widget>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="labelNuestraBase">
    <property name="geometry">
     <rect>
      <x>30</x>
