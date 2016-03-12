@@ -82,6 +82,11 @@
     </item>
     <item>
      <property name="text">
+      <string>3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
       <string>2</string>
      </property>
     </item>
@@ -177,41 +182,6 @@
     <item>
      <property name="text">
       <string>Azul</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Añil</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Violeta</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Naranja</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Gris</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Negro</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Blanco</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Rosa</string>
      </property>
     </item>
    </widget>
@@ -366,7 +336,7 @@
     </item>
     <item>
      <property name="text">
-      <string>Mixto</string>
+      <string>Híbrido</string>
      </property>
     </item>
     <item>
@@ -470,6 +440,19 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonMatrcula">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>160</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Generar matrícula</string>
     </property>
    </widget>
   </widget>
