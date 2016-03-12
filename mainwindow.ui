@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>734</width>
-    <height>287</height>
+    <height>335</height>
    </rect>
   </property>
   <property name="mouseTracking">
@@ -40,7 +40,7 @@
      <rect>
       <x>173</x>
       <y>10</y>
-      <width>471</width>
+      <width>521</width>
       <height>31</height>
      </rect>
     </property>
@@ -453,6 +453,19 @@
     </property>
     <property name="text">
      <string>Generar matrícula</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonGuardar">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>240</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Guardar vehículo</string>
     </property>
    </widget>
   </widget>

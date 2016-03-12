@@ -24,6 +24,8 @@ private slots:
 
     void on_textEditNombre_textChanged();
 
+    void on_buttonGuardar_clicked();
+
 private:
     Ui::MainWindow *ui;
     vehiculo *esteVehiculo;

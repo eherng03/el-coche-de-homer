@@ -34,3 +34,8 @@ void MainWindow::on_buttonMatrcula_clicked()
 {
     ui->labelMatriculaGenerada->setText(esteVehiculo->generarMatricula().c_str());
 }
+
+void MainWindow::on_buttonGuardar_clicked()
+{
+
+}
