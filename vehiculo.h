@@ -14,7 +14,7 @@ public:
     vehiculo();
 
     //constructor y destructor de la clase
-    vehiculo(string tipo,string nombre,string matricula,int ruedas,string color,string combustible,string accesorio, bool burbuja , bool bocina , bool portavasos,bool cocheDeHomer);
+    vehiculo(string tipo,string nombre,string matricula,int ruedas,int potencia,string color,string combustible,string accesorio, bool burbuja , bool bocina , bool portavasos,bool cocheDeHomer);
 
 
 
@@ -50,6 +50,7 @@ private:
     string nombre;
     string matricula;
     int ruedas;
+    int potencia;
     string color;
     string combustible;
     bool kitEmergencia;
