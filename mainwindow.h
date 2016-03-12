@@ -26,7 +26,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    vehiculo vehiculo;
+    vehiculo esteVehiculo;
 
 };
 

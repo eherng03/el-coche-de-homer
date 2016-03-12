@@ -8,7 +8,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    this->vehiculo = new vehiculo();
+    this->esteVehiculo = new vehiculo();
 }
 
 MainWindow::~MainWindow()
@@ -20,18 +20,18 @@ void MainWindow::on_buttonCrear_clicked()
 {
     //no sé qué metodo te coge el texto
     //vehiculo->setNombre(ui->textEditNombre->));
-    vehiculo->setRuedas(ui->comboBoxRuedas->currentText());
-    vehiculo->setColor(ui->comboBoxColor->currentText());
-    vehiculo->setPotencia(ui->comboBoxPotencia->currentText());
-    vehiculo->setCombustible(ui->comboBoxCombustible->currentText());
-    vehiculo->setAccesorio(ui->comboBoxAccesorio->currentText());
-    vehiculo->setBurbuja(ui->checkBurbuja->isChecked());
-    vehiculo->setPosavasos(ui->checkPosavasos->isChecked());
-    vehiculo->setVocinas(ui->checkVocinas->isChecked());
-    ui->labelTipo->setText(vehiculo->getTipo());
+    esteVehiculo.setRuedas(ui->comboBoxRuedas->currentText());
+    esteVehiculo.setColor(ui->comboBoxColor->currentText());
+    esteVehiculo.setPotencia(ui->comboBoxPotencia->currentText());
+    esteVehiculo.setCombustible(ui->comboBoxCombustible->currentText());
+    esteVehiculo.setAccesorio(ui->comboBoxAccesorio->currentText());
+    esteVehiculo.setBurbuja(ui->checkBurbuja->isChecked());
+    esteVehiculo.setPosavasos(ui->checkPosavasos->isChecked());
+    esteVehiculo.setVocinas(ui->checkVocinas->isChecked());
+    ui->labelTipo->setText(esteVehiculo.getTipo());
 }
 
 void MainWindow::on_buttonMatrcula_clicked()
 {
-    ui->labelMatriculaGenerada->setText(vehiculo->generarMatrigula());
+    ui->labelMatriculaGenerada->setText(esteVehiculo.generarMatricula());
 }

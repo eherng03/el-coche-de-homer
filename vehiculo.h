@@ -16,23 +16,13 @@ public:
     //constructor y destructor de la clase
     vehiculo(string tipo,string nombre,string matricula,int ruedas,string color,string combustible,string accesorio, bool burbuja , bool bocina , bool portavasos,bool cocheDeHomer);
 
-    string tipo;
-    string nombre;
-    string matricula;
-    int ruedas;
-    string color;
-    string combustible;
-    string accesorio;
-    bool burbuja;
-    bool bocina;
-    bool portavasos;
-    bool cocheDeHomer;
+
 
 
     string getTipo(string xtipo);
     void setNombre(string xnombre);
-    void generarMatricula(string xmatricula);
-    void setRuedas(int xruedas);
+    string generarMatricula();
+    void setRuedas(string xruedas);     //para no tener que cambiarlo en la combo box
     void setColor(string xcolor);
     void setAccesorio(string xaccesorio);
     void setCombustible(string xcombustible);
@@ -42,8 +32,22 @@ public:
     void setCocheDeHomer(bool xcocheDeHomer);
 
 
+private:
 
+    string tipo;
+    string nombre;
+    string matricula;
+    int ruedas;
+    string color;
+    string combustible;
+    bool kitEmergencia;
+    bool ruedaRepuesto;
+    bool burbuja;
+    bool bocina;
+    bool portavasos;
+    bool cocheDeHomer;
 
 
 
 };
+#endif //VEHICULO_H
