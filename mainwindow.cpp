@@ -18,20 +18,19 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_buttonCrear_clicked()
 {
-    //no sé qué metodo te coge el texto
-    //vehiculo->setNombre(ui->textEditNombre->));
-    esteVehiculo.setRuedas(ui->comboBoxRuedas->currentText());
-    esteVehiculo.setColor(ui->comboBoxColor->currentText());
-    esteVehiculo.setPotencia(ui->comboBoxPotencia->currentText());
-    esteVehiculo.setCombustible(ui->comboBoxCombustible->currentText());
-    esteVehiculo.setAccesorio(ui->comboBoxAccesorio->currentText());
-    esteVehiculo.setBurbuja(ui->checkBurbuja->isChecked());
-    esteVehiculo.setPosavasos(ui->checkPosavasos->isChecked());
-    esteVehiculo.setVocinas(ui->checkVocinas->isChecked());
-    ui->labelTipo->setText(esteVehiculo.getTipo());
+    esteVehiculo->setNombre(ui->textEditNombre->toPlainText().toStdString());
+    esteVehiculo->setRuedas(ui->comboBoxRuedas->currentText().toStdString());
+    esteVehiculo->setColor(ui->comboBoxColor->currentText().toStdString());
+    esteVehiculo->setPotencia(ui->comboBoxPotencia->currentText().toStdString());
+    esteVehiculo->setCombustible(ui->comboBoxCombustible->currentText().toStdString());
+    esteVehiculo->setAccesorio(ui->comboBoxAccesorio->currentText().toStdString());
+    esteVehiculo->setBurbuja(ui->checkBurbuja->isChecked());
+    esteVehiculo->setPosavasos(ui->checkPosavasos->isChecked());
+    esteVehiculo->setBocina(ui->checkVocinas->isChecked());
+    ui->labelTipo->setText(esteVehiculo->getTipo().c_str());
 }
 
 void MainWindow::on_buttonMatrcula_clicked()
 {
-    ui->labelMatriculaGenerada->setText(esteVehiculo.generarMatricula());
+    ui->labelMatriculaGenerada->setText(esteVehiculo->generarMatricula().c_str());
 }
