@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <vehiculo.h>
 #include <string>
+#include <listavehiculos.h>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -37,5 +38,10 @@ void MainWindow::on_buttonMatrcula_clicked()
 
 void MainWindow::on_buttonGuardar_clicked()
 {
-
+    if(this->ventanaVehiculosCreados == NULL){
+        ventanaVehiculosCreados = new listaVehiculos(*this);
+        ventanaVehiculosCreados->addVehiculo(*esteVehiculo);
+    }else{
+        ventanaVehiculosCreados->addVehiculo(*esteVehiculo);
+    }
 }

@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <vehiculo.h>
+#include <listavehiculos.h>
 #include <string>
 
 namespace Ui {
@@ -29,6 +30,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     vehiculo *esteVehiculo;
+    listaVehiculos *ventanaVehiculosCreados;
 
 };
 

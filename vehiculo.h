@@ -20,6 +20,8 @@ public:
 
 
     string getTipo();
+    string getMatricula();
+    string getNombre();
     void setNombre(string xnombre);
     string generarMatricula();
     void setRuedas(string xruedas);     //para no tener que cambiarlo en la combo box
@@ -31,7 +33,7 @@ public:
     void setBocina(bool xbocina);
     void setPosavasos(bool xposavasos);
     void setCocheDeHomer(bool xcocheDeHomer);
-
+    string toString();
 
 private:
 
