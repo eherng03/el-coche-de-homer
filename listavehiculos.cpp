@@ -16,8 +16,7 @@ listaVehiculos::~listaVehiculos()
 }
 
 void listaVehiculos::addVehiculo(vehiculo esteVehiculo){
-    vehiculosCreados = vehiculosCreados + esteVehiculo.toString();
-    this->ui->textVehiculosGuardados->setText(vehiculosCreados.c_str());
     this->contadorVehiculos = this->contadorVehiculos + 1;
-    this->ui->labelContadorVehiculosCreados->setText(contadorVehiculos);
+    vehiculosCreados = vehiculosCreados + std::to_string(contadorVehiculos) + ". " + esteVehiculo.toString();
+    this->ui->textVehiculosGuardados->setText(vehiculosCreados.c_str());
 }
