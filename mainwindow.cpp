@@ -39,9 +39,9 @@ void MainWindow::on_buttonMatrcula_clicked()
 void MainWindow::on_buttonGuardar_clicked()
 {
     if(this->ventanaVehiculosCreados == NULL){
-        ventanaVehiculosCreados = new listaVehiculos(*this);
-        ventanaVehiculosCreados->addVehiculo(*esteVehiculo);
+        this->ventanaVehiculosCreados->show();
+        this->ventanaVehiculosCreados->addVehiculo(*esteVehiculo);
     }else{
-        ventanaVehiculosCreados->addVehiculo(*esteVehiculo);
+        this->ventanaVehiculosCreados->addVehiculo(*esteVehiculo);
     }
 }
