@@ -20,6 +20,10 @@ listaVehiculos::~listaVehiculos()
 
 void listaVehiculos::addVehiculo(vehiculo esteVehiculo){
     this->contadorVehiculos = this->contadorVehiculos + 1;
-    vehiculosCreados = vehiculosCreados + to_string(contadorVehiculos) + ". " + esteVehiculo.toString();
+    string contadorAux;
+    ostringstream convert;
+    convert << contadorVehiculos;
+    contadorAux = convert.str();
+    vehiculosCreados = vehiculosCreados + contadorAux + ". " + esteVehiculo.toString();
     this->ui->textVehiculosGuardados->setText(vehiculosCreados.c_str());
 }
