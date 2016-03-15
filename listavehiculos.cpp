@@ -1,6 +1,9 @@
 #include "listavehiculos.h"
 #include "ui_listavehiculos.h"
 #include <vehiculo.h>
+#include <string>
+#include <string.h>
+using namespace std;
 
 listaVehiculos::listaVehiculos(QWidget *parent) :
     QFrame(parent),
@@ -17,6 +20,6 @@ listaVehiculos::~listaVehiculos()
 
 void listaVehiculos::addVehiculo(vehiculo esteVehiculo){
     this->contadorVehiculos = this->contadorVehiculos + 1;
-    vehiculosCreados = vehiculosCreados + std::to_string(contadorVehiculos) + ". " + esteVehiculo.toString();
+    vehiculosCreados = vehiculosCreados + to_string(contadorVehiculos) + ". " + esteVehiculo.toString();
     this->ui->textVehiculosGuardados->setText(vehiculosCreados.c_str());
 }

@@ -3,6 +3,9 @@
 #include <string.h>
 #include <string>
 #include <sstream>
+#include <math.h>
+#include <time.h>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -17,28 +20,28 @@ vehiculo::vehiculo(){
 }
 
 string vehiculo::getTipo(){
-    if(this->ruedas == 1){
+    if(this->ruedas.compare("1") == 0){
         this->tipo = "Monociclo";
-    }else if(this->ruedas == 2){
+    }else if(this->ruedas.compare("2") == 0){
         if(combustible == "A pedales"){
             this->tipo = "Bicicleta";
         }else{
              this->tipo = "Moto";
         }
-    }else if(this->ruedas == 3){
-        if(combustible == "A pedales"){
+    }else if(this->ruedas.compare("3") == 0){
+        if(combustible.compare("A pedales") == 0){
             this->tipo = "Triciclo";
         }else{
             this->tipo = "Triciclo con motor";
         }
-    }else if(this->ruedas == 4){
+    }else if(this->ruedas.compare("4") == 0){
         if(this->burbuja || this->bocina || this->posavasos){
             this->tipo = "COCHE DE HOMER";
-        }else if(compare(this->combustible, "Híbrido") == 0){
+        }else if(this->combustible.compare("Híbrido") == 0){
             this->tipo = "Coche híbrido";
-        }else if(compare(this->combustible, "Eléctrico") == 0){
+        }else if(this->combustible.compare("Eléctrico") == 0){
             this->tipo = "Coche eléctrico";
-        }else if(compare(this->combustible, "Solar") == 0){
+        }else if(this->combustible.compare("Solar") == 0){
             this->tipo = "Coche solar";
         }
     }
@@ -88,7 +91,7 @@ void vehiculo::setRuedas(string xruedas){
 }
 
 void vehiculo::setPotencia(string xpotencia){
-    this->portencia = xpotencia;
+    this->potencia = xpotencia;
 }
 
 void vehiculo::setColor(string xcolor){
@@ -96,7 +99,7 @@ void vehiculo::setColor(string xcolor){
 }
 
 void vehiculo::setAccesorio(string xaccesorio){
-    if(compare(xaccesorio, "Rueda de repuesto") == 0){
+    if(xaccesorio.compare("Rueda de repuesto") == 0){
         this->ruedaRepuesto = true;
         this->kitEmergencia = false;
     }else{
@@ -124,5 +127,6 @@ void vehiculo::setBurbuja(bool xburbuja){
 string vehiculo::toString(){
     string cadenaVehiculo;
     cadenaVehiculo = "Tipo de coche: " + this->getTipo() + " de color " + this->getColor() + ", su nombre: " + this->getNombre() + ", su matrícula: " + this->getMatricula() + "\n";
+    return cadenaVehiculo;
 }
 

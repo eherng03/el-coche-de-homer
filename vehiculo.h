@@ -5,6 +5,9 @@
 #include <string>
 #include <string.h>
 #include <sstream>
+#include <math.h>
+#include <time.h>
+#include <stdlib.h>
 
 using namespace std;
 

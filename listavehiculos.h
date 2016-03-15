@@ -2,7 +2,11 @@
 #define LISTAVEHICULOS_H
 
 #include <vehiculo.h>
+#include <string>
+#include <string.h>
 #include <QFrame>
+
+using namespace std;
 
 namespace Ui {
 class listaVehiculos;
