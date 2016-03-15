@@ -5,9 +5,6 @@
 #include <string>
 #include <string.h>
 #include <sstream>
-#include <math.h>
-#include <time.h>
-#include <stdlib.h>
 
 using namespace std;
 
@@ -17,20 +14,17 @@ public:
     vehiculo();
 
     //constructor y destructor de la clase
-    vehiculo(string tipo,string nombre,string matricula,int ruedas,string potencia,string color,string combustible, bool burbuja , bool bocina , bool portavasos,bool kitEmergencia, bool ruedaRepuesto);
-
-
-
-
+    vehiculo(string tipo,string nombre,string matricula,int ruedas,string color,string combustible,string accesorio, bool burbuja , bool bocina , bool portavasos,bool cocheDeHomer);
     string getTipo();
     string getMatricula();
     string getNombre();
+    string getColor();
     void setNombre(string xnombre);
     string generarMatricula();
-    void setRuedas(int xruedas);     //para no tener que cambiarlo en la combo box
+    void setRuedas(string xruedas);     //para no tener que cambiarlo en la combo box
     void setPotencia(string xpotencia);
     void setColor(string xcolor);
-    void setAccesorio(bool xkitEmergencia,bool xruedaRepuesto);
+    void setAccesorio(string xaccesorio);
     void setCombustible(string xcombustible);
     void setBurbuja(bool burbuja);
     void setBocina(bool xbocina);
@@ -42,7 +36,7 @@ private:
     string tipo;
     string nombre;
     string matricula;
-    int ruedas;
+    string ruedas;
     string potencia;
     string color;
     string combustible;
@@ -50,11 +44,7 @@ private:
     bool ruedaRepuesto;
     bool burbuja;
     bool bocina;
-    bool portavasos;
-    bool cocheDeHomer;
-
-
+    bool posavasos;
 
 };
 #endif //VEHICULO_H
-
