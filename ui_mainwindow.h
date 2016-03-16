@@ -43,7 +43,6 @@ public:
     QCheckBox *checkBurbuja;
     QCheckBox *checkVocinas;
     QCheckBox *checkPosavasos;
-    QPushButton *buttonCrear;
     QComboBox *comboBoxPotencia;
     QComboBox *comboBoxCombustible;
     QComboBox *comboBoxAccesorio;
@@ -113,9 +112,6 @@ public:
         checkPosavasos->setObjectName(QStringLiteral("checkPosavasos"));
         checkPosavasos->setGeometry(QRect(380, 140, 151, 21));
         checkPosavasos->setFont(font);
-        buttonCrear = new QPushButton(centralWidget);
-        buttonCrear->setObjectName(QStringLiteral("buttonCrear"));
-        buttonCrear->setGeometry(QRect(530, 200, 181, 31));
         comboBoxPotencia = new QComboBox(centralWidget);
         comboBoxPotencia->setObjectName(QStringLiteral("comboBoxPotencia"));
         comboBoxPotencia->setGeometry(QRect(170, 80, 171, 22));
@@ -143,10 +139,10 @@ public:
         labelTipoGenerado->setFont(font);
         buttonMatrcula = new QPushButton(centralWidget);
         buttonMatrcula->setObjectName(QStringLiteral("buttonMatrcula"));
-        buttonMatrcula->setGeometry(QRect(530, 160, 181, 31));
+        buttonMatrcula->setGeometry(QRect(520, 190, 181, 31));
         botonGuardar = new QPushButton(centralWidget);
         botonGuardar->setObjectName(QStringLiteral("botonGuardar"));
-        botonGuardar->setGeometry(QRect(270, 230, 131, 51));
+        botonGuardar->setGeometry(QRect(250, 230, 151, 51));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -191,7 +187,6 @@ public:
         checkBurbuja->setText(QApplication::translate("MainWindow", "Burbuja para ni\303\261os", 0));
         checkVocinas->setText(QApplication::translate("MainWindow", "M\303\272ltiples vocinas", 0));
         checkPosavasos->setText(QApplication::translate("MainWindow", "Portavasos gigante", 0));
-        buttonCrear->setText(QApplication::translate("MainWindow", "Crear veh\303\255culo", 0));
         comboBoxPotencia->clear();
         comboBoxPotencia->insertItems(0, QStringList()
          << QApplication::translate("MainWindow", "75CV", 0)
@@ -220,7 +215,7 @@ public:
         labelMatriculaGenerada->setText(QString());
         labelTipoGenerado->setText(QString());
         buttonMatrcula->setText(QApplication::translate("MainWindow", "Generar matr\303\255cula", 0));
-        botonGuardar->setText(QApplication::translate("MainWindow", "Guardar vehiculo", 0));
+        botonGuardar->setText(QApplication::translate("MainWindow", "Crear y guardar vehiculo", 0));
     } // retranslateUi
 
 };

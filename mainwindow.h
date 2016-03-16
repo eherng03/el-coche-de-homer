@@ -18,9 +18,10 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     listaVehiculos *ventanaVehiculosCreados;
+    void crearVehiculo();
 
 private slots:
-    void on_buttonCrear_clicked();
+    //void on_buttonCrear_clicked();
 
     void on_buttonMatrcula_clicked();
 

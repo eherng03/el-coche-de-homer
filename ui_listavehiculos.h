@@ -29,36 +29,28 @@ public:
     QWidget *scrollAreaWidgetContents;
     QTextEdit *textVehiculosGuardados;
     QLabel *labelNuestraBase;
-    QLabel *labelContadorVehiculosCreados;
-    QLabel *labelIndicadorContador;
 
     void setupUi(QFrame *listaVehiculos)
     {
         if (listaVehiculos->objectName().isEmpty())
             listaVehiculos->setObjectName(QStringLiteral("listaVehiculos"));
-        listaVehiculos->resize(400, 331);
+        listaVehiculos->resize(631, 303);
         listaVehiculos->setFrameShape(QFrame::StyledPanel);
         listaVehiculos->setFrameShadow(QFrame::Raised);
         scrollArea = new QScrollArea(listaVehiculos);
         scrollArea->setObjectName(QStringLiteral("scrollArea"));
-        scrollArea->setGeometry(QRect(20, 50, 361, 231));
+        scrollArea->setGeometry(QRect(20, 50, 591, 231));
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 359, 229));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 589, 229));
         textVehiculosGuardados = new QTextEdit(scrollAreaWidgetContents);
         textVehiculosGuardados->setObjectName(QStringLiteral("textVehiculosGuardados"));
-        textVehiculosGuardados->setGeometry(QRect(0, 0, 361, 231));
+        textVehiculosGuardados->setGeometry(QRect(0, 0, 591, 231));
         scrollArea->setWidget(scrollAreaWidgetContents);
         labelNuestraBase = new QLabel(listaVehiculos);
         labelNuestraBase->setObjectName(QStringLiteral("labelNuestraBase"));
-        labelNuestraBase->setGeometry(QRect(30, 30, 191, 16));
-        labelContadorVehiculosCreados = new QLabel(listaVehiculos);
-        labelContadorVehiculosCreados->setObjectName(QStringLiteral("labelContadorVehiculosCreados"));
-        labelContadorVehiculosCreados->setGeometry(QRect(110, 300, 61, 16));
-        labelIndicadorContador = new QLabel(listaVehiculos);
-        labelIndicadorContador->setObjectName(QStringLiteral("labelIndicadorContador"));
-        labelIndicadorContador->setGeometry(QRect(20, 300, 101, 16));
+        labelNuestraBase->setGeometry(QRect(30, 20, 191, 16));
 
         retranslateUi(listaVehiculos);
 
@@ -69,8 +61,6 @@ public:
     {
         listaVehiculos->setWindowTitle(QApplication::translate("listaVehiculos", "Frame", 0));
         labelNuestraBase->setText(QApplication::translate("listaVehiculos", "Vehiculos en nuestra base de datos:", 0));
-        labelContadorVehiculosCreados->setText(QString());
-        labelIndicadorContador->setText(QApplication::translate("listaVehiculos", "Vehiculos creados:", 0));
     } // retranslateUi
 
 };

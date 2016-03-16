@@ -17,7 +17,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_buttonCrear_clicked()
+void MainWindow::crearVehiculo()
 {
     esteVehiculo->setNombre(ui->textEditNombre->toPlainText().toStdString());
     esteVehiculo->setRuedas(ui->comboBoxRuedas->currentText().toStdString());
@@ -44,7 +44,8 @@ void MainWindow::on_buttonMatrcula_clicked()
 
 void MainWindow::on_botonGuardar_clicked()
 {
-    if(this->ventanaVehiculosCreados == NULL){
+    crearVehiculo();
+    if(!this->ventanaVehiculosCreados->isVisible()){
         this->ventanaVehiculosCreados->show();
         this->ventanaVehiculosCreados->addVehiculo(*esteVehiculo);
     }else{
