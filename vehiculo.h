@@ -34,6 +34,7 @@ public:
     void setPosavasos(bool xposavasos);
     string toString();
 
+
 private:
 
     string tipo;

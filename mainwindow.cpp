@@ -38,11 +38,6 @@ void MainWindow::on_buttonMatrcula_clicked()
     ui->labelMatriculaGenerada->setText(esteVehiculo->generarMatricula().c_str());
 }
 
-//void MainWindow::on_textEditNombre_textChanged(){
-
-//}
-
-
 
 void MainWindow::on_botonGuardar_clicked()
 {
@@ -50,7 +45,7 @@ void MainWindow::on_botonGuardar_clicked()
 
     if(ui->textEditNombre->toPlainText().toStdString().compare("") == 0){
         msgBox.setWindowTitle("Error");
-        msgBox.setText("No esta permitido crear el coche sin rellenar el campo nombre.");
+        msgBox.setText("No esta permitido crear un coche sin rellenar el campo nombre.");
         msgBox.exec();
     }else{
         crearVehiculo();
@@ -62,4 +57,9 @@ void MainWindow::on_botonGuardar_clicked()
         }
     }
 
+}
+
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+    this->ventanaVehiculosCreados->setVisible(false);
 }

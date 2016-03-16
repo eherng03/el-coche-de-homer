@@ -21,15 +21,12 @@ public:
     void crearVehiculo();
 
 private slots:
-    //void on_buttonCrear_clicked();
 
     void on_buttonMatrcula_clicked();
 
-//    void on_textEditNombre_textChanged();
-
-   // void on_buttonGuardar_clicked();
-
     void on_botonGuardar_clicked();
+
+    void closeEvent(QCloseEvent *event);
 
 private:
     Ui::MainWindow *ui;
