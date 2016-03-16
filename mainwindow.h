@@ -23,9 +23,11 @@ private slots:
 
     void on_buttonMatrcula_clicked();
 
-    void on_textEditNombre_textChanged();
+//    void on_textEditNombre_textChanged();
 
-    void on_buttonGuardar_clicked();
+   // void on_buttonGuardar_clicked();
+
+    void on_botonGuardar_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -29,7 +29,7 @@ string vehiculo::getTipo(){
              this->tipo = "Moto";
         }
     }else if(this->ruedas.compare("3") == 0){
-        if(this->combustible.compare("A pedales") == 0){
+        if(combustible.compare("A pedales") == 0){
             this->tipo = "Triciclo";
         }else{
             this->tipo = "Triciclo con motor";
@@ -43,14 +43,10 @@ string vehiculo::getTipo(){
             this->tipo = "Coche eléctrico";
         }else if(this->combustible.compare("Solar") == 0){
             this->tipo = "Coche solar";
-        }else if(this->combustible.compare("A pedales") == 0){
-            this->tipo = "Coche a pedales";
-        }else{
-            this->tipo = "Coche";
         }
     }
     else{
-        this->tipo = "Camión";
+        this->tipo = "Camion";
     }
 
     return this->tipo;
@@ -74,7 +70,7 @@ void vehiculo::setNombre(string xnombre){
 
 string vehiculo::generarMatricula(){
 
-    char nmatricula[8];
+    char nmatricula[7];
     string numeros = "0123456789";
     string letras = "BCFGHJKLMNPRSTVWXYZ";
 
@@ -86,7 +82,6 @@ string vehiculo::generarMatricula(){
         nmatricula[i] = letras[rand() % letras.length()];
 
     }
-    nmatricula[7] = '\0';
     matricula = string(nmatricula);
     return matricula;
 }

@@ -36,7 +36,13 @@ void MainWindow::on_buttonMatrcula_clicked()
     ui->labelMatriculaGenerada->setText(esteVehiculo->generarMatricula().c_str());
 }
 
-void MainWindow::on_buttonGuardar_clicked()
+//void MainWindow::on_textEditNombre_textChanged(){
+
+//}
+
+
+
+void MainWindow::on_botonGuardar_clicked()
 {
     if(this->ventanaVehiculosCreados == NULL){
         this->ventanaVehiculosCreados->show();

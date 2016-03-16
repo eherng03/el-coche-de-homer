@@ -52,6 +52,7 @@ public:
     QLabel *labelMatriculaGenerada;
     QLabel *labelTipoGenerado;
     QPushButton *buttonMatrcula;
+    QPushButton *botonGuardar;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -60,7 +61,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(734, 287);
+        MainWindow->resize(734, 344);
         MainWindow->setMouseTracking(false);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
@@ -72,7 +73,7 @@ public:
         labelNombre->setFont(font);
         textEditNombre = new QTextEdit(centralWidget);
         textEditNombre->setObjectName(QStringLiteral("textEditNombre"));
-        textEditNombre->setGeometry(QRect(173, 10, 471, 31));
+        textEditNombre->setGeometry(QRect(173, 10, 521, 31));
         textEditNombre->viewport()->setProperty("cursor", QVariant(QCursor(Qt::IBeamCursor)));
         labelRuedas = new QLabel(centralWidget);
         labelRuedas->setObjectName(QStringLiteral("labelRuedas"));
@@ -143,6 +144,9 @@ public:
         buttonMatrcula = new QPushButton(centralWidget);
         buttonMatrcula->setObjectName(QStringLiteral("buttonMatrcula"));
         buttonMatrcula->setGeometry(QRect(530, 160, 181, 31));
+        botonGuardar = new QPushButton(centralWidget);
+        botonGuardar->setObjectName(QStringLiteral("botonGuardar"));
+        botonGuardar->setGeometry(QRect(270, 230, 131, 51));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -216,6 +220,7 @@ public:
         labelMatriculaGenerada->setText(QString());
         labelTipoGenerado->setText(QString());
         buttonMatrcula->setText(QApplication::translate("MainWindow", "Generar matr\303\255cula", 0));
+        botonGuardar->setText(QApplication::translate("MainWindow", "Guardar vehiculo", 0));
     } // retranslateUi
 
 };
