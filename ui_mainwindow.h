@@ -142,7 +142,7 @@ public:
         buttonMatrcula->setGeometry(QRect(520, 190, 181, 31));
         botonGuardar = new QPushButton(centralWidget);
         botonGuardar->setObjectName(QStringLiteral("botonGuardar"));
-        botonGuardar->setGeometry(QRect(250, 230, 151, 51));
+        botonGuardar->setGeometry(QRect(520, 230, 181, 41));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));

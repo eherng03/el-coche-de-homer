@@ -28,7 +28,7 @@ void MainWindow::crearVehiculo()
     esteVehiculo->setBurbuja(ui->checkBurbuja->isChecked());
     esteVehiculo->setPosavasos(ui->checkPosavasos->isChecked());
     esteVehiculo->setBocina(ui->checkVocinas->isChecked());
-    ui->labelTipo->setText(esteVehiculo->getTipo().c_str());
+    ui->labelTipoGenerado->setText(esteVehiculo->getTipo().c_str());
 }
 
 void MainWindow::on_buttonMatrcula_clicked()
