@@ -74,7 +74,7 @@ void vehiculo::setNombre(string xnombre){
 
 string vehiculo::generarMatricula(){
 
-    char nmatricula[7];
+    char nmatricula[8];
     string numeros = "0123456789";
     string letras = "BCFGHJKLMNPRSTVWXYZ";
 
@@ -86,6 +86,7 @@ string vehiculo::generarMatricula(){
         nmatricula[i] = letras[rand() % letras.length()];
 
     }
+    nmatricula[7] = '\0';
     matricula = string(nmatricula);
     return matricula;
 }
