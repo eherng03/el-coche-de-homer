@@ -11,12 +11,16 @@ using namespace std;
 
 
 vehiculo::vehiculo(){
+    //Creamos unos valores por defecto
+    ruedas = "1";
+    potencia = "75CV";
+    color = "Rojo";
+    combustible = "Diesel";
     kitEmergencia = false;
-    ruedaRepuesto = false;
+    ruedaRepuesto = true;
     burbuja = false;
     bocina = false;
     posavasos = false;
-
 }
 
 string vehiculo::getTipo(){
