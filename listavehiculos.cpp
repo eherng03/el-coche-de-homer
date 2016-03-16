@@ -3,6 +3,7 @@
 #include <vehiculo.h>
 #include <string>
 #include <string.h>
+
 using namespace std;
 
 listaVehiculos::listaVehiculos(QWidget *parent) :

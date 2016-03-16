@@ -17,6 +17,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+    listaVehiculos *ventanaVehiculosCreados;
 
 private slots:
     void on_buttonCrear_clicked();
@@ -32,7 +33,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     vehiculo *esteVehiculo;
-    listaVehiculos *ventanaVehiculosCreados;
+    //listaVehiculos *ventanaVehiculosCreados;
 
 };
 
