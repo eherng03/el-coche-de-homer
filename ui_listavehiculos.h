@@ -34,7 +34,7 @@ public:
     {
         if (listaVehiculos->objectName().isEmpty())
             listaVehiculos->setObjectName(QStringLiteral("listaVehiculos"));
-        listaVehiculos->resize(631, 303);
+        listaVehiculos->resize(631, 300);
         listaVehiculos->setFrameShape(QFrame::StyledPanel);
         listaVehiculos->setFrameShadow(QFrame::Raised);
         scrollArea = new QScrollArea(listaVehiculos);
@@ -47,6 +47,7 @@ public:
         textVehiculosGuardados = new QTextEdit(scrollAreaWidgetContents);
         textVehiculosGuardados->setObjectName(QStringLiteral("textVehiculosGuardados"));
         textVehiculosGuardados->setGeometry(QRect(0, 0, 591, 231));
+        textVehiculosGuardados->setReadOnly(true);
         scrollArea->setWidget(scrollAreaWidgetContents);
         labelNuestraBase = new QLabel(listaVehiculos);
         labelNuestraBase->setObjectName(QStringLiteral("labelNuestraBase"));
@@ -59,7 +60,7 @@ public:
 
     void retranslateUi(QFrame *listaVehiculos)
     {
-        listaVehiculos->setWindowTitle(QApplication::translate("listaVehiculos", "Frame", 0));
+        listaVehiculos->setWindowTitle(QApplication::translate("listaVehiculos", "Base de datos", 0));
         labelNuestraBase->setText(QApplication::translate("listaVehiculos", "Vehiculos en nuestra base de datos:", 0));
     } // retranslateUi
 

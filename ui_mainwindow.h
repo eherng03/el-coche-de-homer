@@ -60,7 +60,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(734, 344);
+        MainWindow->resize(734, 328);
         MainWindow->setMouseTracking(false);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
@@ -81,6 +81,7 @@ public:
         comboBoxRuedas = new QComboBox(centralWidget);
         comboBoxRuedas->setObjectName(QStringLiteral("comboBoxRuedas"));
         comboBoxRuedas->setGeometry(QRect(170, 50, 171, 22));
+        comboBoxRuedas->setCursor(QCursor(Qt::PointingHandCursor));
         labelPotencia = new QLabel(centralWidget);
         labelPotencia->setObjectName(QStringLiteral("labelPotencia"));
         labelPotencia->setGeometry(QRect(20, 80, 141, 21));
@@ -96,6 +97,7 @@ public:
         comboBoxColor = new QComboBox(centralWidget);
         comboBoxColor->setObjectName(QStringLiteral("comboBoxColor"));
         comboBoxColor->setGeometry(QRect(450, 50, 201, 22));
+        comboBoxColor->setCursor(QCursor(Qt::PointingHandCursor));
         labelAccesorio = new QLabel(centralWidget);
         labelAccesorio->setObjectName(QStringLiteral("labelAccesorio"));
         labelAccesorio->setGeometry(QRect(20, 110, 91, 21));
@@ -104,23 +106,29 @@ public:
         checkBurbuja->setObjectName(QStringLiteral("checkBurbuja"));
         checkBurbuja->setGeometry(QRect(20, 140, 151, 17));
         checkBurbuja->setFont(font);
+        checkBurbuja->setCursor(QCursor(Qt::PointingHandCursor));
         checkVocinas = new QCheckBox(centralWidget);
         checkVocinas->setObjectName(QStringLiteral("checkVocinas"));
         checkVocinas->setGeometry(QRect(200, 140, 151, 17));
         checkVocinas->setFont(font);
+        checkVocinas->setCursor(QCursor(Qt::PointingHandCursor));
         checkPosavasos = new QCheckBox(centralWidget);
         checkPosavasos->setObjectName(QStringLiteral("checkPosavasos"));
         checkPosavasos->setGeometry(QRect(380, 140, 151, 21));
         checkPosavasos->setFont(font);
+        checkPosavasos->setCursor(QCursor(Qt::PointingHandCursor));
         comboBoxPotencia = new QComboBox(centralWidget);
         comboBoxPotencia->setObjectName(QStringLiteral("comboBoxPotencia"));
         comboBoxPotencia->setGeometry(QRect(170, 80, 171, 22));
+        comboBoxPotencia->setCursor(QCursor(Qt::PointingHandCursor));
         comboBoxCombustible = new QComboBox(centralWidget);
         comboBoxCombustible->setObjectName(QStringLiteral("comboBoxCombustible"));
         comboBoxCombustible->setGeometry(QRect(530, 80, 121, 22));
+        comboBoxCombustible->setCursor(QCursor(Qt::PointingHandCursor));
         comboBoxAccesorio = new QComboBox(centralWidget);
         comboBoxAccesorio->setObjectName(QStringLiteral("comboBoxAccesorio"));
         comboBoxAccesorio->setGeometry(QRect(110, 110, 271, 22));
+        comboBoxAccesorio->setCursor(QCursor(Qt::PointingHandCursor));
         labelMatricula = new QLabel(centralWidget);
         labelMatricula->setObjectName(QStringLiteral("labelMatricula"));
         labelMatricula->setGeometry(QRect(20, 170, 141, 21));
@@ -140,9 +148,11 @@ public:
         buttonMatrcula = new QPushButton(centralWidget);
         buttonMatrcula->setObjectName(QStringLiteral("buttonMatrcula"));
         buttonMatrcula->setGeometry(QRect(520, 190, 181, 31));
+        buttonMatrcula->setCursor(QCursor(Qt::PointingHandCursor));
         botonGuardar = new QPushButton(centralWidget);
         botonGuardar->setObjectName(QStringLiteral("botonGuardar"));
         botonGuardar->setGeometry(QRect(520, 230, 181, 41));
+        botonGuardar->setCursor(QCursor(Qt::PointingHandCursor));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));

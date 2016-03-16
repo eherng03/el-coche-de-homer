@@ -3,6 +3,8 @@
 #include <vehiculo.h>
 #include <string>
 #include <listavehiculos.h>
+#include <string.h>
+#include <qmessagebox.h>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -44,11 +46,20 @@ void MainWindow::on_buttonMatrcula_clicked()
 
 void MainWindow::on_botonGuardar_clicked()
 {
-    crearVehiculo();
-    if(!this->ventanaVehiculosCreados->isVisible()){
-        this->ventanaVehiculosCreados->show();
-        this->ventanaVehiculosCreados->addVehiculo(*esteVehiculo);
+    QMessageBox msgBox;
+
+    if(ui->textEditNombre->toPlainText().toStdString().compare("") == 0){
+        msgBox.setWindowTitle("Error");
+        msgBox.setText("No esta permitido crear el coche sin rellenar el campo nombre.");
+        msgBox.exec();
     }else{
-        this->ventanaVehiculosCreados->addVehiculo(*esteVehiculo);
+        crearVehiculo();
+        if(!this->ventanaVehiculosCreados->isVisible()){
+            this->ventanaVehiculosCreados->show();
+            this->ventanaVehiculosCreados->addVehiculo(*esteVehiculo);
+        }else{
+            this->ventanaVehiculosCreados->addVehiculo(*esteVehiculo);
+        }
     }
+
 }
